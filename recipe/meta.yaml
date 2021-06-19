@@ -1,0 +1,48 @@
+{% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
+
+package:
+    name: libelas
+    version: {{ version }}
+
+source:
+  git_url: git@github.com:NeoGeographyToolkit/libelas.git
+  git_tag: 4526942
+
+build:
+    number: 0
+
+requirements:
+    build:
+# Use the local compiler for OSX as the conda one has issues.
+        - {{ compiler('c') }}     # [linux]
+        - {{ compiler('cxx') }}   # [linux]
+        - cmake
+
+    host:
+        - jpeg 9b
+        - libpng 1.6.37
+        - libtiff 4.0.9
+        - zlib 1.2.11
+        - isis 4.4.0 # to catch dependency problems
+    run:
+        - jpeg 9b
+        - libpng 1.6.37
+        - libtiff 4.0.9
+        - zlib 1.2.11
+        - fftw
+        - isis 4.4.0 # to catch dependency problems
+
+test:
+    files:
+        imports:
+        commands:
+        comment:
+
+about:
+    home:
+    license: APACHE II
+    summary:
+
+extra:
+  recipe-maintainers:
+    - oleg.alexandrov@gmail.com
