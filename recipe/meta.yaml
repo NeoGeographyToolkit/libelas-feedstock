@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: git@github.com:NeoGeographyToolkit/libelas.git
-  git_tag: 4526942
+  git_tag: c1f0a3f
 
 build:
     number: 0
