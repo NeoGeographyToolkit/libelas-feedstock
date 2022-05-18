@@ -1,4 +1,4 @@
-{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
+{% set version = "isis6" %} # synched up to isis dependencies for this version
 
 package:
     name: libelas
@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: git@github.com:NeoGeographyToolkit/libelas.git
-  git_tag: c1f0a3f
+  git_tag: e8fdfa8
 
 build:
     number: 0
@@ -21,14 +21,14 @@ requirements:
 #       - libgomp                 # [linux]
 
     host:
-        - jpeg 9d
-        - openjpeg 2.1.0
+        - jpeg 9e
+        - openjpeg 2.3.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11
     run:
-        - jpeg 9d
-        - openjpeg 2.1.0
+        - jpeg 9*
+        - openjpeg 2.3.0
         - libpng 1.6.37
         - libtiff 4.0.10
         - zlib 1.2.11

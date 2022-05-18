@@ -16,7 +16,9 @@ fi
 
 mkdir -p build
 cd build
-cmake .. -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}"
+cmake .. -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}" \
+    -DTIFF_INCLUDE_DIR="${PREFIX}/include"                    \
+    -DCMAKE_CXX_FLAGS="-I${PREFIX}/include"
 
 make -j${CPU_COUNT}
 
