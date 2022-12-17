@@ -22,6 +22,7 @@ cmake .. -DTIFF_LIBRARY_RELEASE="${PREFIX}/lib/libtiff${EXT}" \
 
 make -j${CPU_COUNT}
 
+# Copy the 'elas' tool to the plugins subdir meant for it
 BIN_DIR=${PREFIX}/plugins/stereo/elas/bin
 mkdir -p ${BIN_DIR}
 /bin/cp -fv elas ${BIN_DIR}/elas

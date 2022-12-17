@@ -1,4 +1,4 @@
-{% set version = "isis6" %} # synched up to isis dependencies for this version
+{% set version = "isis7" %} # synched up to isis dependencies for this version
 
 package:
     name: libelas
@@ -6,16 +6,14 @@ package:
 
 source:
   git_url: git@github.com:NeoGeographyToolkit/libelas.git
-  git_tag: e8fdfa8
 
 build:
     number: 0
 
 requirements:
     build:
-# Use the local compiler for OSX. See build.sh for details.
-        - {{ compiler('c') }}     # [linux]
-        - {{ compiler('cxx') }}   # [linux]
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
         - cmake
         - llvm-openmp             # [osx]
 #       - libgomp                 # [linux]
