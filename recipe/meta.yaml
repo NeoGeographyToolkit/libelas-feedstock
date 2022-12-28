@@ -38,9 +38,9 @@ test:
         comment:
 
 about:
-    home:
+    home: https://github.com/NeoGeographyToolkit/libelas
     license: APACHE II
-    summary:
+    summary: An Efficient Large-scale Stereo Matching Algorithm
 
 extra:
   recipe-maintainers:
