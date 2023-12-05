@@ -1,4 +1,4 @@
-{% set version = "isis7" %} # synched up to isis dependencies for this version
+{% set version = "asp3.4.0_alpha" %} # synched up to isis dependencies for this version
 
 package:
     name: libelas
@@ -19,16 +19,14 @@ requirements:
 #       - libgomp                 # [linux]
 
     host:
-        - jpeg 9e
-        - openjpeg 2.3.0
+        - openjpeg 2.5.0
         - libpng 1.6.39
-        - libtiff 4.4.0
+        - libtiff 4.6.0
         - zlib 1.2.13
     run:
-        - jpeg 9e
-        - openjpeg 2.3.0
+        - openjpeg 2.5.0
         - libpng 1.6.39
-        - libtiff 4.4.0
+        - libtiff 4.6.0
         - zlib 1.2.13
 
 test:
