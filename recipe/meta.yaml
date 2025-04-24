@@ -1,4 +1,4 @@
-{% set version = "asp3.4.0_alpha" %} # synched up to isis dependencies for this version
+{% set version = "asp3.5.0" %} # synched up to isis dependencies for this version
 
 package:
     name: libelas
